@@ -1,0 +1,59 @@
+.container {
+    height: 40px;
+    flex: 0 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--border);
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+.tabsArea {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-direction: row-reverse;
+}
+
+.tab {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    padding: 8px 0;
+    position: relative;
+    white-space: nowrap;
+}
+
+.tab.active {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--text-primary);
+}
+
+.iconBtn {
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.maArea {
+    display: none;
+    /* Hidden to match the screenshot layout where MAs are on the chart */
+}

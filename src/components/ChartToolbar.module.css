@@ -1,0 +1,110 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--border);
+}
+
+.chartNavRow {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    height: 36px;
+}
+
+.navLinks {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.navBtn {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    position: relative;
+    padding: 8px 0;
+}
+
+.activeNavBtn {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.activeNavBtn::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-primary);
+}
+
+.aiBadge {
+    background: linear-gradient(90deg, #ff007a, #7928ca);
+    color: white;
+    font-size: 9px;
+    padding: 1px 4px;
+    border-radius: 4px;
+    margin-left: 4px;
+    font-weight: 800;
+}
+
+.toolsRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    height: 32px;
+    border-top: 1px solid var(--border);
+}
+
+.timeframes {
+    display: flex;
+    gap: 12px;
+}
+
+.tfBtn {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+.activeTf {
+    color: var(--green);
+}
+
+.modes {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.modeBtn {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+.activeModeBtn {
+    color: #2160FB;
+    /* Active blue color like TradingView or Original active state */
+}
+
+.divider {
+    width: 1px;
+    height: 12px;
+    background-color: var(--border);
+    margin: 0 4px;
+}
+
+.iconBtn {
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}

@@ -1,0 +1,180 @@
+.statsBar {
+    background-color: var(--bg-primary);
+    padding: 10px 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    gap: 32px;
+}
+
+.statsBar.stale {
+    opacity: 0.6;
+}
+
+.leftGroup {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.pairInfo {
+    display: flex;
+    align-items: center;
+}
+
+.pairIconOuter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pairIconInner {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #2160FB;
+    /* Blue background for token */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.pairIconText {
+    display: flex;
+    flex-direction: column;
+}
+
+.pairLeftBrand {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.star {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.pairTitle {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.pairSub {
+    font-size: 10px;
+    color: var(--text-primary);
+    background-color: var(--bg-card);
+    padding: 2px 4px;
+    border-radius: 2px;
+    margin-top: 2px;
+    display: inline-block;
+}
+
+.mainPriceBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lastPrice {
+    font-family: var(--font-mono);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--text-primary);
+    border-radius: 2px;
+    padding: 0 4px;
+    margin-left: -4px;
+    transition: background-color 0.2s;
+}
+
+.subPrice {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+}
+
+.up {
+    color: var(--green);
+}
+
+.down {
+    color: var(--red);
+}
+
+/* Flash Animations */
+@keyframes flashG {
+    0% {
+        background-color: rgba(14, 203, 129, 0.2);
+    }
+
+    100% {
+        background-color: transparent;
+    }
+}
+
+@keyframes flashR {
+    0% {
+        background-color: rgba(246, 70, 93, 0.2);
+    }
+
+    100% {
+        background-color: transparent;
+    }
+}
+
+.flashUp {
+    animation: flashG 0.5s ease-out;
+}
+
+.flashDown {
+    animation: flashR 0.5s ease-out;
+}
+
+.statsGrid {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex: 1;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.statsGrid::-webkit-scrollbar {
+    display: none;
+}
+
+.statCol {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    white-space: nowrap;
+}
+
+.label {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+.val {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+}
+
+.valAmount {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+}
+
+.countdown {
+    color: #ff9800;
+}

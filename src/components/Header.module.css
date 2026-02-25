@@ -1,0 +1,76 @@
+.header {
+    height: 52px;
+    flex: 0 0 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--border);
+}
+
+.leftIcons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.rightGroup {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.symbolGroup {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.symbol {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text-primary);
+}
+
+.badge {
+    font-size: 10px;
+    background-color: var(--bg-card);
+    padding: 2px 4px;
+    border-radius: 4px;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.chevron {
+    color: var(--text-primary);
+}
+
+.rightIcons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.iconBtn {
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+}
+
+.statusDot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.statusDot.live {
+    background-color: var(--green);
+    box-shadow: 0 0 4px var(--green);
+}
+
+.statusDot.closed {
+    background-color: var(--red);
+}

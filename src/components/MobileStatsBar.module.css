@@ -1,0 +1,152 @@
+.statsBar {
+    background-color: var(--bg-primary);
+    padding: 12px 24px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.statsBar.stale {
+    opacity: 0.6;
+}
+
+.mainPriceContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0px;
+}
+
+.lastPriceHeader {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--text-secondary);
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.fairPriceRow {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+}
+
+.fairPriceLabel {
+    color: var(--text-secondary);
+}
+
+.fairPriceVal {
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+}
+
+.lastPrice {
+    font-family: var(--font-mono);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--text-primary);
+    transition: color 0.2s, background-color 0.2s;
+    align-self: flex-end;
+    padding: 2px 4px;
+    margin-right: -4px;
+    margin-top: -2px;
+    border-radius: 4px;
+}
+
+.lastPrice.up {
+    color: var(--green);
+}
+
+.lastPrice.down {
+    color: var(--red);
+}
+
+/* Flash Animations */
+@keyframes flashG {
+    0% {
+        background-color: rgba(14, 203, 129, 0.2);
+    }
+
+    100% {
+        background-color: transparent;
+    }
+}
+
+@keyframes flashR {
+    0% {
+        background-color: rgba(246, 70, 93, 0.2);
+    }
+
+    100% {
+        background-color: transparent;
+    }
+}
+
+.flashUp {
+    animation: flashG 0.5s ease-out;
+}
+
+.flashDown {
+    animation: flashR 0.5s ease-out;
+}
+
+.subPrice {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.change {
+    font-weight: 700;
+}
+
+.change.up {
+    color: var(--green);
+}
+
+.change.down {
+    color: var(--red);
+}
+
+.gridContainer {
+    flex: 1;
+}
+
+.gridScroll {
+    display: flex;
+    gap: 32px;
+    justify-content: flex-start;
+}
+
+.statCol {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    min-width: max-content;
+}
+
+.label {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+.val {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-primary);
+}

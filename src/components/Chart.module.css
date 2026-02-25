@@ -1,0 +1,175 @@
+.chartWrapper {
+    flex: 1;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-primary);
+    min-height: 0;
+    /* important for flex growing */
+}
+
+.chartContainer {
+    flex: 1;
+    width: 100%;
+    position: relative;
+    min-height: 0;
+}
+
+.expandBtn {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    background-color: var(--bg-primary);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    cursor: pointer;
+    transform: rotate(90deg);
+}
+
+.indicatorsRow {
+    height: 36px;
+    flex: 0 0 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    border-top: 1px solid var(--border);
+    background-color: var(--bg-primary);
+    z-index: 10;
+}
+
+.indicatorLeft {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.indicatorPill {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 12px;
+    color: var(--text-secondary);
+    background-color: transparent;
+    transition: color 0.2s ease;
+    position: relative;
+}
+
+.indicatorPill.active {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.indicatorPill.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 8px;
+    right: 8px;
+    height: 2px;
+    background-color: var(--text-primary);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(11, 14, 17, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    gap: 16px;
+    backdrop-filter: blur(2px);
+}
+
+.spinner {
+    width: 32px;
+    height: 32px;
+    border: 3px solid var(--border-light);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.errorText {
+    color: var(--red);
+    font-size: 14px;
+    text-align: center;
+    max-width: 80%;
+}
+
+.retryBtn {
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+    border: 1px solid var(--border-light);
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.retryBtn:active {
+    background-color: var(--border);
+}
+
+.legendContainer {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 5;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 11px;
+    font-family: var(--font-mono);
+}
+
+.legendRow {
+    display: flex;
+    gap: 8px;
+    color: var(--text-muted);
+}
+
+.legendRow span {
+    display: inline-flex;
+    gap: 4px;
+}
+
+.legendVal {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.ma5 {
+    color: var(--ma5);
+}
+
+.ma10 {
+    color: var(--ma10);
+}
+
+.ma30 {
+    color: var(--ma30);
+}
+
+.ma60 {
+    color: var(--ma60);
+}

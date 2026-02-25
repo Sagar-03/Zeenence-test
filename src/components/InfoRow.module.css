@@ -1,0 +1,51 @@
+.infoRow {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--border);
+    flex-direction: row-reverse;
+    /* Icons on left, text flowing RTL mostly */
+}
+
+.textGroup {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    margin-right: 8px;
+    /* since row-reverse is flexed, margin-right pushes left padding */
+}
+
+.text {
+    font-size: 13px;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.aiBadgeContainer {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.aiBadge {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.aiLogo {
+    font-weight: 800;
+    font-size: 12px;
+    font-family: var(--font-ui);
+}
+
+.iconBtn {
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

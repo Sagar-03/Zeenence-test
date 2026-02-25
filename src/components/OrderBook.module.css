@@ -1,0 +1,163 @@
+.container {
+    width: 240px;
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-primary);
+    border-left: 1px solid var(--border);
+    font-family: var(--font-mono);
+    font-size: 11px;
+}
+
+@media (max-width: 999px) {
+    .container {
+        width: 100%;
+        border-left: none;
+        border-top: 1px solid var(--border);
+    }
+}
+
+.header {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    font-family: var(--font-ui);
+}
+
+.tableHead {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 16px;
+    color: var(--text-muted);
+    font-size: 11px;
+}
+
+.bookArea {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.asks,
+.bids {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    scrollbar-width: none;
+    padding: 0 16px;
+}
+
+.asks::-webkit-scrollbar,
+.bids::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 0;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.row>span {
+    flex: 1;
+    text-align: right;
+    z-index: 2;
+}
+
+.row>span:first-child {
+    text-align: left;
+}
+
+.priceUp {
+    color: var(--green);
+}
+
+.priceDown {
+    color: var(--red);
+}
+
+.depthBar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.middlePrice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    margin: 2px 0;
+    background-color: var(--bg-card);
+}
+
+.spreadItem {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.spreadAlignRight {
+    align-items: flex-end;
+}
+
+.spreadLabel {
+    font-size: 10px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.spreadVal {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* Row Flash Animations */
+.flashRed {
+    animation: flashRowRed 0.15s ease-out;
+}
+
+.flashGreen {
+    animation: flashRowGreen 0.15s ease-out;
+}
+
+@keyframes flashRowRed {
+    0% {
+        background-color: rgba(246, 70, 93, 0.4);
+    }
+
+    100% {
+        background-color: transparent;
+    }
+}
+
+@keyframes flashRowGreen {
+    0% {
+        background-color: rgba(46, 189, 133, 0.4);
+    }
+
+    100% {
+        background-color: transparent;
+    }
+}

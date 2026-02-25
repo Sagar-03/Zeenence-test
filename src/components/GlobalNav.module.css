@@ -1,0 +1,95 @@
+.globalNav {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--border);
+    font-family: var(--font-ui);
+    font-size: 14px;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.brand {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.5px;
+}
+
+.navLinks {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.link {
+    color: var(--text-primary);
+    font-weight: 500;
+    transition: color 0.2s;
+    cursor: pointer;
+}
+
+.link:hover {
+    color: var(--green);
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-card);
+    border-radius: 16px;
+    padding: 6px 12px;
+    gap: 8px;
+    width: 140px;
+}
+
+.searchIcon {
+    color: var(--text-muted);
+}
+
+.searchInput {
+    border: none;
+    background: transparent;
+    outline: none;
+    color: var(--text-primary);
+    width: 100%;
+    font-size: 12px;
+}
+
+.signUpBtn {
+    background-color: #2160FB;
+    /* Brand blue from screenshot */
+    color: white;
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--text-secondary);
+    margin-left: 8px;
+}
